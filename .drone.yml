@@ -1,0 +1,18 @@
+build:
+  image: nixos/nix:1.10
+  commands:
+    - nix-channel --add http://nixos.org/channels/nixos-16.03 dev
+    - nix-channel --update
+    - nix-env -iA dev.nodejs
+    - npm install
+    - export NIX_PATH="nixpkgs=/nix/var/nix/profiles/per-user/root/channels/dev/"
+    - node ./test
+notify:
+  email:
+    from: git@matejc.com
+    host: $$SMTP_HOST
+    port: 465
+    username: git@matejc.com
+    password: $$SMTP_PASSWORD
+    recipients:
+      - cotman.matej@gmail.com

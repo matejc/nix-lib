@@ -1,0 +1,17 @@
+{
+  "devDependencies": {
+    "expect": "1.20.1",
+    "mocha": "2.5.3"
+  },
+  "dependencies": {
+    "bluebird": "3.4.0",
+    "glob": "7.0.3",
+    "got": "6.5.0",
+    "lodash": "4.13.1",
+    "mkdirp": "^0.5.1",
+    "ncp": "^2.0.0",
+    "unpack-stream": "1.0.1"
+  },
+  "name": "nix-lib",
+  "version": "0.0.1"
+}
